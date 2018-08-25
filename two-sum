@@ -24,4 +24,24 @@ class Solution:
                 return [dict.index( target - nums[i]),i]
             else:
                 dict.append(nums[i])
-            
+     
+    
+ 思路2   Beats 82.89%
+ 
+ 
+ class Solution:
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        dict = {}
+        for i in range(len(nums)):
+            if nums[i] in dict :
+                return [dict[nums[i]],i]
+            else:
+                dict[ target-nums[i]] = i
+                
+                
+ 字典的查询时间比 数组快
